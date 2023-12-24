@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Adiciona a classe para esconder a tela de carregamento
     setTimeout(function () {
         carregamentoElement.classList.add('carregamento-escondido');
-    }, 200);
+    }, 2500);
 
     // Event listener para alterar o modo com os ícones
     document.getElementById('darkModeSwitch').addEventListener('change', function () {
