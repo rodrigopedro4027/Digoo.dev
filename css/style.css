@@ -848,12 +848,12 @@ body::before{
 
 @keyframes web-img {
     0% {
-        background: url("https://digoo.dev.br/assets/web 2.jpg");
+        background: url("https://digoo.dev.br/assets/web-2.jpg");
         background-size: cover;
     }
 
     25% {
-        background: url("https://digoo.dev.br/assets/web 3.jpg");
+        background: url("https://digoo.dev.br/assets/web-3.jpg");
         background-size: cover;
     }
 
@@ -863,7 +863,7 @@ body::before{
     }
 
     100% {
-        background: url("https://digoo.dev.br/assets/web 2.jpg");
+        background: url("https://digoo.dev.br/assets/web-2.jpg");
         background-size: cover;
     }
 }
@@ -877,12 +877,12 @@ body::before{
 
 @keyframes imagem-img {
     0% {
-        background: url("https://digoo.dev.br/assets/imagem 2.jpg");
+        background: url("https://digoo.dev.br/assets/imagem-2.jpg");
         background-size: cover;
     }
 
     25% {
-        background: url("https://digoo.dev.br/assets/imagem 3.jpg");
+        background: url("https://digoo.dev.br/assets/imagem-3.jpg");
         background-size: cover;
     }
 
@@ -892,7 +892,7 @@ body::before{
     }
 
     100% {
-        background: url("https://digoo.dev.br/assets/imagem 2.jpg");
+        background: url("https://digoo.dev.br/assets/imagem-2.jpg");
         background-size: cover;
     }
 }
