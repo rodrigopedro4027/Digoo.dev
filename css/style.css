@@ -841,58 +841,58 @@ body::before{
 
 .skills-img-web {
 
-    background: url("./assets/web.jpg");
+    background: url("https://digoo.dev.br/assets/web.jpg");
     animation: web-img 10s infinite;
     animation-timing-function: cubic-bezier(.72, .03, 0, .94);
 }
 
 @keyframes web-img {
     0% {
-        background: url("./assets/web 2.jpg");
+        background: url("https://digoo.dev.br/assets/web 2.jpg");
         background-size: cover;
     }
 
     25% {
-        background: url("./assets/web 3.jpg");
+        background: url("https://digoo.dev.br/assets/web 3.jpg");
         background-size: cover;
     }
 
     75% {
-        background: url("./assets/web.jpg");
+        background: url("https://digoo.dev.br/assets/web.jpg");
         background-size: cover;
     }
 
     100% {
-        background: url("./assets/web 2.jpg");
+        background: url("https://digoo.dev.br/assets/web 2.jpg");
         background-size: cover;
     }
 }
 
 .skills-img-imagem {
     margin-left: auto;
-    background: url("./assets/imagem.jpg");
+    background: url("https://digoo.dev.br/assets/imagem.jpg");
     animation: imagem-img 10s infinite;
     animation-timing-function: cubic-bezier(.72, .03, 0, .94);
 }
 
 @keyframes imagem-img {
     0% {
-        background: url("./assets/imagem 2.jpg");
+        background: url("https://digoo.dev.br/assets/imagem 2.jpg");
         background-size: cover;
     }
 
     25% {
-        background: url("./assets/imagem 3.jpg");
+        background: url("https://digoo.dev.br/assets/imagem 3.jpg");
         background-size: cover;
     }
 
     75% {
-        background: url("./assets/imagem.jpg");
+        background: url("https://digoo.dev.br/assets/imagem.jpg");
         background-size: cover;
     }
 
     100% {
-        background: url("./assets/imagem 2.jpg");
+        background: url("https://digoo.dev.br/assets/imagem 2.jpg");
         background-size: cover;
     }
 }
