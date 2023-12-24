@@ -13,8 +13,24 @@ document.addEventListener('DOMContentLoaded', function () {
         invertColors();
     }
 
-    var saudacao = getGreeting(hora);
-    saudacaoElement.textContent = saudacao;
+    // Verifica o horário para determinar a saudação e o modo de cor
+    if (hora >= 0 && hora < 5) {
+        // De 00:00 até 05:00
+        document.body.classList.add('dark-mode');
+        saudacaoElement.textContent = 'Boa Madrugada';
+    } else if (hora >= 5 && hora < 12) {
+        // De 05:00 até 12:00
+        document.body.classList.remove('dark-mode');
+        saudacaoElement.textContent = 'Bom Dia';
+    } else if (hora >= 12 && hora < 18) {
+        // De 12:00 até 18:00
+        document.body.classList.remove('dark-mode');
+        saudacaoElement.textContent = 'Boa Tarde';
+    } else {
+        // A partir das 18:00
+        document.body.classList.add('dark-mode');
+        saudacaoElement.textContent = 'Boa Noite';
+    }
 
     // Adiciona a classe para esconder a tela de carregamento
     setTimeout(function () {
@@ -53,15 +69,5 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateModeText(isDarkMode) {
         var modeText = document.querySelector('.mode-text');
         modeText.textContent = isDarkMode ? 'Modo Claro' : 'Modo Escuro';
-    }
-
-    function getGreeting(hora) {
-        if (hora >= 0 && hora < 12) {
-            return 'Bom dia';
-        } else if (hora >= 12 && hora < 18) {
-            return 'Boa tarde';
-        } else {
-            return 'Boa noite';
-        }
     }
 });
