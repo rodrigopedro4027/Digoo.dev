@@ -459,6 +459,11 @@ body::before{
 }
 
 /* Estilo ao passar o mouse sobre o banner */
+
+.bg-banner{
+    overflow: hidden;
+}
+
 .bg-banner:hover .bloco-detalhes {
     background-color: var(--secondary-color);
     color: var(--primary-color);
