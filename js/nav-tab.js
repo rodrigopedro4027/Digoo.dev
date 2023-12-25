@@ -5,7 +5,7 @@ let tabs_wrapper = document.getElementsByClassName("tabs-wrapper")
                 let tab_list = tabs.getElementsByClassName("tab")
                 let active_tab = tab_list[0]
                 for (tab of tab_list) {
-                    tab.setAttribute("tabindex", 1)
+                    tab.setAttribute("tabindex", 0)
 
                     const change_selected = (e) => {
                         e.target.parentElement.style.setProperty("--bar-width", e.target.offsetWidth + "px")
