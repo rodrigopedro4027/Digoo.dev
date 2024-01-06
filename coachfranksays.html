@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Coach Frank Says</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@500;700&family=Rubik+Bubbles&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <link rel="icon" href="https://digoo.dev.br/imgs/frk-icon.png" sizes="16x16">
+</head>
+
+<body>
+    <header>
+        
+    </header>
+    <main>
+        <!-- place navbar here -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Afacad:wght@500;700&family=Rubik+Bubbles&display=swap');
+
+            body {
+                background-color: rgb(34, 43, 51);
+                background-size: contain;
+                font-family: 'Afacad';
+
+            }
+
+            :root {
+                --blur: 5
+            }
+
+            .bg {
+                display: block;
+                position: fixed;
+                padding: 0rem;
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+                box-shadow: inset 10px -50px 180px black;
+                filter: contrast(110%) saturate(100%);
+                background-image: url(https://www.transparenttextures.com/patterns/buried.png);
+                z-index: -1;
+            }
+
+            .blackout {
+                background-color: black;
+                animation-name: on;
+                animation-duration: 1s;
+                animation-delay: 1s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: 1;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                z-index: 99;
+                pointer-events: none;
+            }
+
+            .esfera-luz-mov {
+                background: linear-gradient(-65deg, rgb(255, 253, 183) 8%, rgba(254, 253, 223, 0.6127572408536586) 10%, rgba(255, 255, 255, 0) 57%);
+                opacity: 1;
+                position: absolute;
+                display: inline-block;
+                height: 50vh;
+                width: 50%;
+                right: 50px;
+                bottom: 10rem;
+                border-radius: 100%;
+                filter: blur(1rem);
+                transform: rotate(30deg);
+                animation: esfera-anim 6s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
+            }
+
+            .esfera-luz-fix {
+                background: linear-gradient(-45deg, rgba(254, 253, 223, 1) 3%, rgba(254, 253, 223, 0.6127572408536586) 10%, rgba(255, 255, 255, 0) 57%);
+                opacity: 0;
+                position: absolute;
+                display: inline-block;
+                height: 20vh;
+                width: 50%;
+                right: 50px;
+                bottom: 18rem;
+                border-radius: 100rem;
+                filter: blur(1rem);
+                transform: rotate(30deg);
+
+                animation-name: spot;
+                animation-duration: 5s;
+                animation-delay: 1.3s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: 1;
+            }
+
+            .esfera-azul {
+                width: 50vw;
+                height: 100%;
+                background-color: rgb(83, 122, 170);
+                filter: blur(30rem);
+                position: absolute;
+                border-radius: 100%;
+                animation-name: azul;
+                animation-duration: 15s;
+                animation-delay: 1s;
+                animation-fill-mode: infinite;
+                animation-iteration-count: 4;
+            }
+
+            @keyframes on {
+                from {
+                    opacity: 1;
+                    background-color: transparent;
+                }
+
+                to {
+                    opacity: 0;
+                    background-color: transparent;
+                }
+            }
+
+            @keyframes spot {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: .18;
+                }
+            }
+
+            @keyframes azul {
+                0% {
+                    opacity: 1;
+                }
+
+                50% {
+                    opacity: .58;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes esfera-anim {
+                0% {
+                    opacity: .0;
+                }
+
+                30% {
+                    opacity: .20;
+                }
+
+                50% {
+                    opacity: .30;
+                }
+
+                60% {
+                    opacity: .10;
+                }
+
+                70% {
+                    opacity: .0;
+                }
+
+                90% {
+                    opacity: .10;
+                }
+
+                100% {
+                    opacity: .0;
+                }
+            }
+
+
+            /***********************/
+
+
+            .sub-titulo {
+                font-family: 'Rubik bubbles';
+                color: rgb(189, 174, 156);
+            }
+
+            .titulo {
+                font-family: 'Rubik bubbles';
+                color: rgb(95, 124, 144);
+                font-size: 20pt;
+                bottom: -20px;
+            }
+
+            .topo-texto {
+                border-bottom: 3px solid rgb(118, 130, 138);
+                padding: 0px 20px 0px 20px;
+            }
+
+            .texto {
+                font-size: 15pt;
+                color: rgb(144, 170, 188);
+                font-weight: 700;
+                line-height: 1.9rem;
+            }
+
+            @media (min-width: 425px) {
+                .titulo {
+                    font-size: 20pt;
+                }
+                .texto {
+                    font-size: 18pt;
+                    color: rgb(144, 170, 188);
+                    font-weight: 700;
+                    line-height: 2.6rem
+                }
+            }
+
+            @media (min-width: 992px) {
+                .sub-titulo {
+                    font-family: 'Rubik bubbles';
+                    color: rgb(189, 174, 156);
+                }
+
+                .titulo {
+                    font-family: 'Rubik bubbles';
+                    color: rgb(95, 124, 144);
+                    font-size: 30pt;
+                    bottom: -20px;
+                }
+
+                .topo-texto {
+                    border-bottom: 3px solid rgb(118, 130, 138);
+                }
+
+                .texto {
+                    font-size: 23pt;
+                    color: rgb(144, 170, 188);
+                    font-weight: 700;
+                    line-height: 2.6rem
+                }
+            }
+
+            .form-label,
+            .form-select,
+            .btn {
+                width: auto;
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+            #idiomaSelect {
+                width: 120px;
+                outline: none;
+            }
+
+            .btn-outline-primary {
+                background-color: #007bff25;
+                border: none;
+                color: #007bff;
+            }
+
+            .btn-outline-primary:hover {
+                background-color: #007bff;
+                color: white;
+            }
+
+            .btn-outline-primary:focus {
+                box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            }
+
+
+            .landing-page {
+                background-color: #fdfdc1;
+                border-radius: 1rem;
+                border: 3px solid black;
+                box-shadow: 20px 20px black;
+                padding: 2rem;
+            }
+
+            .loader-dashed {
+                align-items: center;
+                text-align: center;
+                display: inline-block;
+                box-sizing: border-box;
+                background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%23cefffe' stroke-width='13' stroke-dasharray='80%25%2c 20%25' stroke-dashoffset='100' stroke-linecap='butt'/%3e%3c/svg%3e");
+                background-size: cover;
+                border-radius: 100px;
+                padding: .75rem;
+                border-radius: 30rem;
+                box-shadow: inset 0px 0px 10px skyblue;
+                filter: drop-shadow(0px 0px 15px skyblue);
+                position: fixed;
+                bottom: 2rem;
+                right: 38vw;
+                border: 0;
+            }
+
+            @media (min-width: 768px) {
+                .loader-dashed {
+                    position: absolute;
+                    bottom: 5rem;
+                    right: 10rem;
+                }
+            }
+
+            .loader-dashed svg {
+                filter: drop-shadow(0px 0px 5px skyblue);
+                border-radius: 30rem;
+                width: 60px;
+                height: 60px;
+                animation: rotation 1s linear infinite;
+                filter: blur(100);
+            }
+
+            @keyframes rotation {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+
+        <div class="blackout"></div>
+        <button type="button" class=" btn loader-dashed" onclick="gerarFrase()">
+            <svg viewBox="0 0 1393 1505" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M748.906 1130.65C681.397 1130.75 615.101 1112.71 556.942 1078.43C498.784 1044.15 450.898 994.886 418.285 935.776C414.947 929.857 411.798 923.811 408.839 917.639C368.6 834.535 360.233 739.561 385.322 650.702C410.411 561.842 467.214 485.268 544.975 435.481C622.735 385.694 716.053 366.15 807.256 380.55C898.459 394.951 981.216 442.297 1039.85 513.621C1044.86 519.666 1049.3 525.995 1054.31 532.513C1056.57 535.631 1058.84 538.748 1060.92 541.96L1392.2 351.144C1384.14 338.171 1375.7 325.576 1366.88 313.359C1362.26 306.841 1357.44 300.606 1352.9 294.466C1237.76 144.881 1070.74 43.8745 884.791 11.3672C698.841 -21.1401 507.461 17.2124 348.396 118.86C189.331 220.508 74.1302 378.072 25.5151 560.473C-23.1 742.875 -1.59998 936.873 85.7747 1104.2C88.9865 1110.25 92.2927 1116.2 95.2211 1122.15C159.392 1235.37 251.743 1330.08 363.312 1397.08C474.88 1464.08 601.876 1501.09 731.97 1504.53C862.065 1507.97 990.84 1477.72 1105.79 1416.72C1220.75 1355.71 1317.98 1266.02 1388.04 1156.35L1064.13 960.526C1029.84 1012.82 983.063 1055.75 928.032 1085.45C873 1115.15 811.441 1130.69 748.906 1130.65Z"
+                    fill="#cefffe" />
+            </svg>
+        </button>
+        <div class="bg">
+
+            <div class="esfera-luz-mov">
+            </div>
+            <div class="esfera-luz-fix">
+            </div>
+            <div class="esfera-azul">
+            </div>
+        </div>
+
+        <div class="container pt-md-5 pt-3">
+            <h2 class="sub-titulo" data-texto-pt="Carregando..." data-texto-en="Loading..." data-texto-ja="ロード中..."
+                data-texto-es="Cargando..." data-texto-fr="Chargement...">Loading...</h2>
+            <div class="mb-3">
+
+                <div class="row justify-content-end align-items-center g-2">
+                    <div class="col-auto">
+                        <select id="idiomaSelect" class="form-select btn-outline-primary" onchange="mudarIdioma()">
+                            <option value="en" data-texto-pt="Inglês" data-texto-en="English" data-texto-ja="英語"
+                                data-texto-es="Inglés" data-texto-fr="Anglais">Inglês</option>
+                            <option value="pt" data-texto-pt="Português" data-texto-en="Portuguese"
+                                data-texto-ja="ポルトガル語" data-texto-es="Portugués" data-texto-fr="Portugais">Português
+                            </option>
+
+                            <option value="ja" data-texto-pt="Japonês" data-texto-en="Japanese" data-texto-ja="日本語"
+                                data-texto-es="Japonés" data-texto-fr="Japonais">Japonês</option>
+                            <option value="es" data-texto-pt="Espanhol" data-texto-en="Spanish" data-texto-ja="スペイン語"
+                                data-texto-es="Español" data-texto-fr="Espagnol">Espanhol</option>
+                            <option value="fr" data-texto-pt="Francês" data-texto-en="French" data-texto-ja="フランス語"
+                                data-texto-es="Francés" data-texto-fr="Français">Francês</option>
+                        </select>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row justify-content-center align-items-center text-justify">
+                <div class="col-10 col-md-7 p-xl-5">
+                    <div class="row mt-3 mt-xl-5 justify-content-center align-items-end topo-texto">
+                        <div class="col-xl-3 col-12 order-xl-1 order-2 text-center">
+                            <img src="https://digoo.dev.br/imgs/frank.png" class="img-fluid" style="max-width: 200px; width: 150px;"
+                                alt="Hi im Coach Frank (by Jason Lee)">
+                        </div>
+                        <div class="col-xl-9 col-12 pt-0 pt-md-4 order-xl-2 order-1">
+                            <span class="titulo text-nowrap" data-texto-pt="Coach Frank Diz"
+                                data-texto-en="Coach Frank Says" data-texto-ja="コーチフランクが言う"
+                                data-texto-es="Coach Frank Dice" data-texto-fr="Coach Frank Dit">Coach Frank Says>Coach
+                                Frank Says</span>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center align-items-center pt-3">
+                        <div class="col">
+                            <p class="texto" id="frase">Never gonna give you up, never gonna let you down Never gonna
+                                run around
+                                and desert you Never gonna make you cry, never gonna say goodbye Never gonna tell a lie
+                                and hurt you
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            const frases = {
+                pt: [
+                    "Os jovens hoje em dia estão envolvidos com modificação corporal. Eu gosto de manter limpo meu templo, amigo... mas se você quiser fazer uma tatuagem, confira as tatuagens no menu Editar Modificações Corporais do Skater. Só não conte para seus pais que o Coach Frank te enviou.",
+                    "Reverts são quando você faz uma rápida volta de 180 graus em powerslide. Bem rápido. Reverts manuais são quando você faz uma daquelas 'man-u-elle' coisas de wheelie e depois faz um rápido revert. Pronto, agora você tem mais conhecimento!",
+                    "Bookmarking é uma magia de alta tecnologia que você pode usar para lembrar das filmagens mais quentes da comunidade ou dos skate.Parks. Faça um bookmark e guarde essas células cerebrais para coisas importantes, como aprender a fazer grab grinds e 'man-u-elle' roverls.",
+                    "O Coach Frank gosta de bigodes e aéreos estilosos. Não posso ajudar você a cultivar um bigode, mas aéreos estilosos são tão fáceis quanto pegar o skate e mover o stick direito. Alguns caras até mexem o stick às vezes para fazer truques de fingerflip. Coach Frankl",
+                    "Aqui vai uma dica de estilo. Pressione (X) para sair de grinds suavemente. Não deixe dizerem que o Coach Frank não mantém as coisas suaves.",
+                    "Se você esteve na minha skate.School, você saberá disso, mas é sempre bom lembrar... prepare seus ollies por mais tempo e flick 'em mais rápido para fazer 'em mais alto. Entendeu? Agora entenda.",
+                    "Mudar as coisas de lugar pode ser divertido e construir caráter. Experimente mover objetos quando estiver em um freeskate online, veja o que acontece.",
+                    "Sentindo-se artístico? Precisa de um logo radical para sua equipe? Visite o site intertube skate.ea.com para conferir os gráficos mais legais da comunidade ou crie os seus próprios.",
+                    "Tem algo a dizer, camarada? Mude o lema do seu perfil no seu skate.Profile online, mas mantenha tudo limpo! Pense nas crianças, cara. Este é o jeito Coach Frank.",
+                    "Possuir desafios é uma coisa. Mas homens com pelos nos lábios os aniquilam. Mate todos, amigo!",
+                    "Os hippies estão na lista de questionáveis do Coach Frank. Mas, saltos hippies? Cara, eles são incríveis! São ainda melhores quando você ajusta o stick direito no ar e faz canhões e judôs. Hi-yaaaa!",
+                    "Se você está se sentindo meio solitário, use o menu Chamar Skater para criar um skater AI. Pros, locais de Carverton, até mesmo seus pequenos companheiros de skate podem ser criados. Agora, chame e role!",
+                    "Benny Fairfax da Stereo se formou em primeiro lugar na minha skate.School. Complete todos os meus desafios tutoriais de educação e você poderá jogar contra ele em uma partida de 1-Up. Vai lá, Benny!",
+                    "Falei com os criadores das regras e disse que saídas não deveriam terminar sua vez nos desafios 1-Up. Quedas sim, mas saídas ganham um mulligan do Coach Frank. Que tal? Entendeu.",
+                    "Muitas vezes você vai querer ver suas manobras radicais de skate logo após fazê-las. Use esse Editor de Replay para assistir replays instantâneos, porque, sabe chefe, sem o vídeo é ficção.",
+                    "Ei, eu amo as pessoas tanto quanto o próximo treinador, mas às vezes elas só atrapalham suas manobras incríveis. Se isso continuar acontecendo, pressione (^) e observe-as correrem."
+                ],
+                en: [
+                    "Kids today are into body modification. I like to keep my temple clean, buddy... but if you want to get yourself some ink, check the tattoos in the Edit Skater Body Mods menu. Just don't let 'em say Coach Frank don't keep it smooth.",
+                    "Reverts are when you do a quick one hundred and eighty degrees of powerslide. Real quick. Manual Reverts are when you do one of them 'man-u-elle' wheelie things and then do a quick revert. There, now you have more knowledge!",
+                    "Bookmarking is some high tech wizardry you can use to remember the hottest community footage or skate.Parks. Bookmark and save those brain cells for the important stuff, like how to do grab grinds and 'man-u-elle' roverls.",
+                    "Coach Frank likes moustaches and stylish airs. Can't help you grow a moustache, but stylish airs are as easy as grabbing the board and moving that right stick around. Fancy dudes even flick the stick sometimes to do fingerflipping tricks. Coach Frankl",
+                    "Here's a little style tip. Press (X) to exit grinds smoothly. Don't let 'em say Coach Frank don't keep it smooth.",
+                    "If you been to my skate.School you'll know this, but it's always good to remember...prep your ollies longer and flick 'em faster to pop 'em higher. Get it? Now get it.",
+                    "Moving stuff around can be fun and it builds character. Try moving objects when in an online freeskate, see what happens.",
+                    "Feeling artsy? Need a radical logo for your team? Visit that skate.ea.com intertube website to check out the coolest community graphics or create your own.",
+                    "Got something to say, Buddy? Change your profile motto in your online skate.Profile, but keep it clean! Think about the kids, man. That's the Coach Frank way.",
+                    "Owning challenges is one thing. But men with hair on their lips Kill 'em. Kill 'em all, buddy!",
+                    "Hippies are on Coach Frank's list of questionables. But, Hippy Jumps? Man, they are aaaawesomel They're even better when you tweak the right stick in the air and do cannonballs and judos. Hi-yaaaa!",
+                    "If you're over feeling kinda lonely, use the Call Skater Menu to spawn yourself an AI skater. Pros, Carverton locals, heck, even your little skate buddies can be spawned. Now, get calling and rolling!",
+                    "Stereo's Benny Fairfax graduated first in his class at my skate.School. Finish all my educating tutorial challenges and you'll get to play him in a game of 1-Up. Get 'em, Benny!",
+                    "I done talk to the rules-makers and told 'em run-outs shouldn't end your turn in 1-Up challenges. Bails do, but run-outs get a Coach Frank mulligan. How about that? Got It.",
+                    "A lot of times you're gonna wanna see your hot skateboarding stunts just after you've done them. Use that Replay Editor thing to watch quick instant replays because, you know chief, without the footy it's fiction.",
+                    "Hey, I love people as much as the next coach, but sometimes they just get in the way of your fancy stunting. If that keeps happening, press (^) and watch them high-tail it"
+                ],
+                ja: [
+                    "今の子供たちはボディ改造が好きなんだ。私は自分の寺院を清潔に保ちたいんだけど...でも、もし刺青を入れたいなら、Edit Skater Body Modsメニューの刺青をチェックしてみてくれ。ただし、親たちにはCoach Frankが送ったって言わないでくれよ。",
+                    "リバートは、パワースライドで一気に180度回転させることです。本当に速い。マニュアル・リバートは、'man-u-elle'ホイールイーのことをしてから、速くリバートすることです。これで、もっと知識が増えましたね！",
+                    "ブックマークは、コミュニティの最新映像やskate.Parksを覚えておくために使えるハイテクな魔法です。ブックマークして、それらの脳細胞を大切なこと、例えばgrab grindsや'man-u-elle' roverlsのやり方など、に使いましょう。",
+                    "Coach Frankは髭とおしゃれなエアが好きなんだ。髭を生やすのを手伝うことはできないけど、おしゃれなエアはボードを掴んで右のスティックを動かすだけ。おしゃれなやつらは時折、指でスティックをフリックしてフィンガーフリップのトリックをやることもある。Coach Frankl",
+                    "少しのスタイルのヒント。 (X)を押して、グラインドを滑らかに終了します。 Coach Frankがスムースに保っていないと言わせないように。",
+                    "私のskate.Schoolに行ったことがあれば、これを知っているでしょうが、覚えておくのはいつも良いことです... olliesを長く準備して、 'emをもっと速くフリックして 'emをもっと高く飛ばします。わかりましたか？今、わかります。",
+                    "物を動かすことは楽しいし、キャラクターを構築します。オンラインフリースケート中にオブジェクトを動かしてみて、何が起こるか見てみてください。",
+                    "アーティスティックな気分ですか？チームのためにラジカルなロゴが必要ですか？ skate.ea.comのインターチューブウェブサイトを訪れて、最もクールなコミュニティグラフィックスをチェックしたり、独自のものを作成したりしてみてください。",
+                    "何か言いたいことがあるか、仲間？オンラインskate.Profileでプロフィールのモットーを変更してください。しかし、清潔に保ってください！子供たちのことを考えて、仲間。それがCoach Frankのやり方です。",
+                    "チャレンジを所有することは一つです。しかし、唇に毛のある男たちは彼らを殺す。全部殺して、仲間！",
+                    "ヒッピーはCoach Frankの疑問のリストに載っています。しかし、Hippy Jumps？おお、それらはすごいです！右のスティックを空中で調整してキャノンボールやジュードをやるとさらに良くなります。Hi-yaaaa!",
+                    "もう少し寂しい気分なら、Call Skaterメニューを使用してAIスケーターを生成してください。プロ、Carvertonの地元の人、まあ、あなたの小さなスケート仲間さえ生成できます。さあ、呼んでローリングしてみてください！",
+                    "StereoのBenny Fairfaxは私のskate.Schoolで一等賞を受賞しました。私の教育チュートリアルのすべてのチャレンジを終了すると、1-Upのゲームで彼とプレイできるようになります。がんばれ、Benny！",
+                    "ルールメーカーと話して、1-Upチャレンジでのランアウトはターンを終わらせるべきではないと伝えました。転倒は終わりますが、ランアウトにはコーチフランクのマリガンがあります。どうですか？わかりましたか。",
+                    "たいていの場合、スケートボードのかっこいいスタントをやった直後に見たくなるでしょう。そのリプレイエディターを使って、すぐにインスタントリプレイを見るんだ。だってね、チーフ、映像がなければフィクションだから。",
+                    "ねえ、私は次のコーチと同じくらい人々が大好きだけど、時々彼らはあなたの派手なスタントの邪魔をするんだ。それが続くなら、（^）を押して、彼らが逃げるのを見てください。"
+                ],
+                es: [
+                    "Los niños hoy en día están en la modificación corporal. Me gusta mantener limpio mi templo, amigo... pero si quieres tatuarte, revisa los tatuajes en el menú de Modificaciones Corporales de Edit Skater. Solo no le digas a tus padres que el Coach Frank te envió.",
+                    "Reverts son cuando haces una rápida vuelta de 180 grados en powerslide. Muy rápido. Los Reverts Manuales son cuando haces una de esas cosas de 'man-u-elle' wheelie y luego haces un rápido revert. ¡Ahí tienes más conocimiento!",
+                    "Bookmarking es una magia de alta tecnología que puedes usar para recordar las mejores grabaciones de la comunidad o skate.Parks. Haz un marcador y guarda esas células cerebrales para cosas importantes, como aprender a hacer grab grinds y 'man-u-elle' roverls.",
+                    "Al Coach Frank le gustan los bigotes y los aéreos elegantes. No puedo ayudarte a crecer un bigote, pero los aéreos elegantes son tan fáciles como agarrar la tabla y mover el stick derecho. Incluso algunos tipos elegantes mueven el stick a veces para hacer trucos de fingerflip. Coach Frankl",
+                    "Aquí tienes un pequeño consejo de estilo. Presiona (X) para salir de las grindas suavemente. No dejes que digan que el Coach Frank no lo hace suave.",
+                    "Si has estado en mi skate.School, sabrás esto, pero siempre es bueno recordar... prepara tus ollies más tiempo y haz 'em más rápido para hacer 'em más altos. ¿Entendido? Ahora entiéndelo.",
+                    "Mover cosas puede ser divertido y construye carácter. Intenta mover objetos cuando estés en un freeskate en línea, a ver qué pasa.",
+                    "¿Te sientes artístico? ¿Necesitas un logo radical para tu equipo? Visita el sitio web intertube skate.ea.com para ver las mejores gráficas de la comunidad o crea la tuya propia.",
+                    "¿Tienes algo que decir, amigo? Cambia tu lema de perfil en tu skate.Profile en línea, ¡pero manténlo limpio! Piensa en los niños, hombre. Esa es la manera del Coach Frank.",
+                    "Poseer desafíos es una cosa. Pero hombres con pelo en los labios los matan a todos, amigo.",
+                    "Los hippies están en la lista de cuestionables de Coach Frank. Pero, ¿Saltos Hippies? Hombre, son asombrosos. Son aún mejores cuando ajustas el stick derecho en el aire y haces cannonballs y judos. ¡Hi-yaaaa!",
+                    "Si te sientes un poco solo, usa el Menú Llamar Skater para hacer aparecer a un skater AI. Pros, locales de Carverton, incluso tus pequeños compañeros de skate pueden aparecer. ¡Ahora, llama y rueda!",
+                    "Benny Fairfax de Stereo se graduó primero en su clase en mi skate.School. Completa todos mis desafíos de tutoriales y podrás jugar con él en un juego de 1-Up. ¡Vamos, Benny!",
+                    "Hablé con los creadores de reglas y les dije que las salidas no deberían terminar tu turno en desafíos 1-Up. Las caídas sí, pero las salidas obtienen un mulligan de Coach Frank. ¿Qué te parece? Entendido.",
+                    "Muchas veces vas a querer ver tus impresionantes trucos de skate justo después de hacerlos. Usa ese Editor de Repetición para ver repeticiones instantáneas rápidas porque, ya sabes jefe, sin el video es ficción.",
+                    "Oye, amo a la gente tanto como el próximo entrenador, pero a veces solo se interponen en el camino de tus acrobacias elegantes. Si eso sigue ocurriendo, presiona (^) y míralos salir corriendo."
+                ],
+                fr: [
+                    "Les enfants d'aujourd'hui sont dans la modification corporelle. J'aime garder mon temple propre, mon pote... mais si tu veux te faire encrer, vérifie les tatouages dans le menu Modifs Corporelles du Skater. Ne dis simplement pas à tes parents que Coach Frank t'a envoyé.",
+                    "Les reverts, c'est quand tu fais une rotation rapide de 180 degrés en powerslide. Très rapidement. Les Reverts Manuels, c'est quand tu fais une de ces choses de wheelie 'man-u-elle' puis que tu fais un revert rapide. Voilà, maintenant tu as plus de connaissance !",
+                    "Le bookmarking, c'est une sorcellerie high-tech que tu peux utiliser pour te rappeler les meilleures vidéos de la communauté ou les skate.Parks. Mets un signet et sauvegarde ces cellules cérébrales pour des trucs importants, comme apprendre à faire des grab grinds et des 'man-u-elle' roverls.",
+                    "Coach Frank aime les moustaches et les airs stylés. Je ne peux pas t'aider à faire pousser une moustache, mais les airs stylés sont aussi faciles que de prendre la planche et de bouger ce stick droit. Les mecs chics flickent même le stick parfois pour faire des tricks de fingerflip. Coach Frankl",
+
+                    "Voici un petit conseil de style. Appuyez sur (X) pour sortir des grinds en douceur. Ne laissez pas dire que Coach Frank ne garde pas ça en douceur.",
+                    "Si vous êtes allé à mon skate.School, vous le saurez, mais il est toujours bon de se rappeler... préparez vos ollies plus longtemps et faites-les tourner plus vite pour les faire sauter plus haut. Vous avez compris ? Maintenant, saisissez l'occasion.",
+                    "Déplacer des objets peut être amusant et cela forge le caractère. Essayez de déplacer des objets lors d'une séance de freeskate en ligne, voyez ce qui se passe.",
+                    "Vous vous sentez artistique ? Besoin d'un logo radical pour votre équipe ? Visitez le site web skate.ea.com intertube pour découvrir les graphismes de la communauté les plus cool ou créez les vôtres.",
+                    "Vous avez quelque chose à dire, pote ? Changez votre devise de profil dans votre skate.Profile en ligne, mais restez propre ! Pensez aux enfants, mec. C'est la manière du Coach Frank.",
+                    "Dominer les défis, c'est une chose. Mais les hommes avec des poils sur les lèvres, c'est autre chose. Tuez-les tous, mon pote !",
+                    "Les hippies figurent sur la liste des doutes du Coach Frank. Mais, les Hippy Jumps ? Man, ils sont gééniaux ! Ils sont encore mieux lorsque vous inclinez le stick droit en l'air et faites des boulets de canon et des judos. Hi-yaaaa !",
+                    "Si vous en avez marre de vous sentir un peu seul, utilisez le menu Appeler le Skater pour faire apparaître un skater IA. Des pros, des locaux de Carverton, même vos petits copains de skate peuvent être invoqués. Allez, appelez et roulez !",
+                    "Benny Fairfax de Stereo a été diplômé en première place de ma skate.School. Terminez tous mes défis tutoriels d'éducation et vous pourrez le défier dans un jeu de 1-Up. Vas-y, Benny !",
+                    "J'ai parlé aux créateurs des règles et leur ai dit que les sorties ne devraient pas terminer votre tour dans les défis 1-Up. Les chutes oui, mais les sorties obtiennent un mulligan de Coach Frank. Qu'en pensez-vous ? Compris.",
+                    "Souvent, vous voudrez voir vos superbes figures de skateboard juste après les avoir faites. Utilisez cet Éditeur de Replay pour regarder des replays instantanés rapides car, vous savez chef, sans la vidéo c'est de la fiction.",
+                    "Hé, j'aime les gens autant que le prochain entraîneur, mais parfois ils gênent juste vos acrobaties sophistiquées. Si cela continue, appuyez sur (^) et regardez-les déguerpir."
+                ]
+            };
+
+
+            let idiomaAtual = 'en';
+
+            function gerarFrase() {
+                const indice = Math.floor(Math.random() * frases[idiomaAtual].length);
+                const frase = frases[idiomaAtual][indice];
+                document.getElementById('frase').innerText = frase;
+            }
+
+            function mudarIdioma() {
+                idiomaAtual = document.getElementById('idiomaSelect').value;
+                atualizarTextos();
+                gerarFrase();
+            }
+
+            function atualizarTextos() {
+                const elementosComTexto = document.querySelectorAll('[data-texto-pt], [data-texto-en], [data-texto-ja], [data-texto-es], [data-texto-fr]');
+                elementosComTexto.forEach(elemento => {
+                    const chave = 'data-texto-' + idiomaAtual;
+                    elemento.innerText = elemento.getAttribute(chave);
+                });
+            }
+
+            // Atualizar textos iniciais
+            atualizarTextos();
+        </script>
+
+
+
+
+
+
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
